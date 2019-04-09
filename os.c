@@ -10,13 +10,13 @@ val[5],//instance variable for array to print max instance.
 
 avail[5],     //It is a 1-d array indicating the number of available resources of each type.
 
-allocated[10][5],//2-d array of size ‘n*m’ that defines the number of resources
+allocated[10][5],//2-d array of size â€˜n*mâ€™ that defines the number of resources
     // of each type currently allocated to each process.
     
-need[10][5],     // 2-d array of size ‘n*m’ that defines the number of resources of each type
+need[10][5],     // 2-d array of size â€˜n*mâ€™ that defines the number of resources of each type
 // currently allocated to each process.
 
-MAX[10][5],//2-d array of size‘n*m’ that defines the maximum demand of
+MAX[10][5],//2-d array of sizeâ€˜n*mâ€™ that defines the maximum demand of
 // each process in a system.
 pno,//number of process
 PROCESS[10],
@@ -70,7 +70,7 @@ for(i=0;i <pno;i++)
  if(need[t][j]<=avail[j])
  count++;
  }
-if(count==resource)
+if(count==resource)//following algo of nedd
 {
 output[start++]=PROCESS[i];
  for(j=0;j<resource;j++)
