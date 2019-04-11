@@ -1,37 +1,19 @@
-
 #include<stdio.h>
- 
-void main()
+int main()
 {
-    int burst[20],p[20],wait[20],tat[20],i,j,n,total=0,a,temp;
-    float avg_wt,avg_tat;
-    printf("Enter number of process:");
-    scanf("%d",&n);
+int i,n,p[10]={1,2,3,4,5,6,7,8,9,10},min,k=1,btime=0;
+int bt[10],temp,j,at[10],wt[10],tt[10],ct[10],ta=0,sum=0;
+float wavg=0,tavg=0,tsum=0,wsum=0;
+float pr[i];
+printf(" -------Shortest Job First Scheduling ( NP )-------\n");
+printf("\nEnter the No. of processes :");
+scanf("%d",&n);
  
-    printf("\nEnter Burst Time:\n");
-    for(i=0;i<n;i++)
-    {
-        printf("p%d:",i+1);
-        scanf("%d",&burst[i]);
-        p[i]=i+1;           //contains process number
-    }
- for(i=0;i<n;i++)
-    {
-        a=i;
-        for(j=i+1;j<n;j++)
-        {
-            if(burst[j]<burst[a])
-                a=j;
-        }
- 
-        temp=burst[i];
-        burst[i]=burst[a];
-        burst[a]=temp;
- 
-        temp=p[i];
-        p[i]=p[a];
-        p[a]=temp;
-    }
- 
-    wait[0]=0;            //waiting time for first process will be zero
+for(i=0;i<n;i++)
+{
+printf("\tEnter the burst time of %d process :",i+1);
+scanf(" %d",&bt[i]);
+printf("\tEnter the arrival time of %d process :",i+1);
+scanf(" %d",&at[i]);
+}
  
