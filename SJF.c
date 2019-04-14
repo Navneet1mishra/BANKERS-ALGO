@@ -105,15 +105,4 @@ return 0;
 printf("priority calculation\n");
  printf("p=1+waitingtime/completion time\n\n\n");
 printf("priority of processes are in order p4>p2>p3>p1");
-
-
-
-
-
-
-
-
-
-
-
 }
